@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Protocolo HTTP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 6px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Voltar para o inicio</a></li>
+      <li><a href="historia_web.html">História da WEB</a></li>
+      <li><a href="curriculo.html">Curriculo</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <h1>Protocolo HTTP:</h1>
+  <p>
+    O HTTP é o protocolo que permite a troca de informações entre o navegador e o servidor na Web. Quando você acessa um site, o navegador faz um pedido e o servidor envia a página de volta.
+  </p>
+
+  <h2>Cliente, Servidor, Requisição e Resposta</h2>
+  <ul>
+    <li><strong>Cliente:</strong> o navegador (como Chrome ou Firefox) que pede o conteúdo.</li>
+    <li><strong>Servidor:</strong> o computador que guarda o site e responde aos pedidos.</li>
+    <li><strong>Requisição:</strong> a mensagem enviada pelo cliente pedindo algo ao servidor.</li>
+    <li><strong>Resposta:</strong> a mensagem que o servidor devolve ao cliente com o resultado e o conteúdo.</li>
+  </ul>
+
+  <h2>Métodos GET e POST:</h2>
+  <ul>
+    <li><strong>GET:</strong> pede dados ao servidor (como abrir uma página ou buscar algo). Parâmetros podem aparecer na URL.</li>
+    <li><strong>POST:</strong> envia dados ao servidor (como cadastrar um usuário ou enviar um formulário).</li>
+  </ul>
+
+  <h2>Exemplo de Requisição HTTP:</h2>
+  <pre>
+GET /http.html HTTP/1.1
+Host: www.exemplo.com.br
+  </pre>
+
+  <h2>Exemplo de Resposta HTTP:</h2>
+  <pre>
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+
+&lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+  </pre>
+
+  <h2>Códigos de Status HTTP:</h2>
+  <table>
+    <tr>
+      <th>Código</th>
+      <th>Significado</th>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td>Tudo certo: a requisição funcionou e o conteúdo foi enviado.</td>
+    </tr>
+    <tr>
+      <td>301</td>
+      <td>Movido permanentemente: o endereço mudou e há redirecionamento.</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>Requisição inválida: o servidor não entendeu o pedido.</td>
+    </tr>
+    <tr>
+      <td>403</td>
+      <td>Proibido: você não tem permissão para acessar isso.</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>Não encontrado: a página ou arquivo não existe no servidor.</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>Erro interno do servidor: algo falhou no servidor ao processar o pedido.</td>
+    </tr>
+  </table>
+
+</body>
+</html>
